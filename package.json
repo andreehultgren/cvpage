@@ -1,7 +1,7 @@
 {
   "name": "cvpage",
   "version": "0.1.0",
-  "homepage": "http://andreehultgren.github.io",
+  "homepage": "http://andreehultgren.github.io/cvpage",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
