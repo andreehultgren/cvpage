@@ -1,35 +1,111 @@
+import WorkIcon from '@material-ui/icons/Work'
+import SchoolIcon from '@material-ui/icons/School'
+import StarsIcon from '@material-ui/icons/Stars';
+
 const Info = {
     person: {
         firstName: "Andree",
         lastName: "Hultgren",
         phoneNumber: "+46736544491",
         imageSrc: "https://wallpaperplay.com/walls/full/c/5/3/34778.jpg",
-        title:"Electrical engineer with a masters in Machine Learning",
+        title: "Electrical engineer with a masters in Machine Learning",
         description: "I love complicated things. I am stubborn, therefore I find solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dictum volutpat. Cras sed ultricies ipsum. In vulputate leo eget sem aliquet, quis aliquet enim fringilla. "
     },
-    pages: [
+    timelineTypes: [
         {
-            pageName:"Education",
-            content:{
-                title:"Education",
-            }
+            id: 1,
+            title: "Education",
+            backgroundColor: "#F48024",
+            textColor: "#FFFFFF",
+            icon: SchoolIcon
         },
         {
-            pageName:"Work Experience",
-            content:"Detta har jag jobbat med"
+            id: 2,
+            title: "Work",
+            backgroundColor: "#62B0DF",
+            textColor: "#FFFFFF",
+            icon: WorkIcon
         },
         {
-            pageName:"Skills",
-            content:"Detta är mina skillz"
-        },
-        {
-            pageName:"Examples",
-            content:"Arbetsexampel"
+            id: 3,
+            title: "Other",
+            backgroundColor: "#62DFB0",
+            textColor: "#FFFFFF",
+            icon: StarsIcon
         }
     ],
-    colors:{
-        header: "#EDEDED"
-    }
+    timeline: [
+        {
+            title: "Masters Degree in Machine Learning",
+            company: "Royal Institute of Technology",
+            description: "Masters degree in Machine Learning with a focus on deep learning and computer vision.",
+            time: "2019 - Present",
+            type: 1,
+        },
+        {
+            title: "Fullstack Developer",
+            company: "Skyqraft",
+            description: "I developed their UI and all logic for both frontend and backend. The work was very successful. 50 new features were released over the span of two months.",
+            time: "Jun 2019 - Present",
+            type: 2
+        },
+        {
+            title: "Technical AI Trainer",
+            company: "Front AI",
+            description: "I trained conversational AI with managing APIs as my main responsibility.",
+            time: "Aug 2019 - Aug 2020",
+            type: 2
+        },
+        {
+            title: "Connection Administrator",
+            company: "Ellevio",
+            description: "I managed incoming special orders and dispatched contractors to install a new electrical facility.",
+            time: "Summer 2019",
+            type: 2
+        },
+        {
+            title: "Bachelor Degree in Electrical Engineering",
+            company: "Royal Institute of Technology",
+            description: "Bachelor degree in Electrical Engineering. My bachelor thesis discussed a motion planning system for autonomous driving.",
+            time: "2016 - 2019",
+            type: 1,
+        },
+        {
+            title: "Supervisor",
+            company: "Haninge municipality",
+            description: "I guided and introduced teenagers to their first job as facility maintenance.",
+            time: "Summer 2018",
+            type: 2
+        },
+        {
+            title: "IT Support",
+            company: "Brandskyddsföreningen",
+            description: "I acted as on-site first-line IT support.",
+            time: "Apr 2017 - Feb 2018",
+            type: 2
+        },
+        {
+            title: "Senior Techbuddy",
+            company: "TechBuddy",
+            description: "I was responsible for providing technical assistance for high profile customers and support for other employees that got stuck when visiting a customer.",
+            time: "Jan 2017 - Okt 2017",
+            type: 2
+        },
+        {
+            title: "Missionary",
+            company: "The Church of Jesus Christ of Latter day Saints",
+            description: "Teaching and guiding people in the beliefs of the denomination",
+            time: "Aug 2014 - Aug 2016",
+            type: 3
+        },
+        {
+            title: "Natural Science",
+            company: "Fredrika Bremergymnasiet",
+            description: 'High school was spent studying natural sciences with a very good result.',
+            time: "2011 - 2014",
+            type: 1,
+        }
+    ]
 
 }
 export default Info

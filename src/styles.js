@@ -1,24 +1,26 @@
-import info from "./metaInfo"
-const {colors} = info;
 export default {
-    headerInfo: {
-        padding:0, 
-        backgroundColor:colors.header, 
-        position:"absolute", 
-        marginLeft:0, 
-        float:"left", 
-        overflow: "hidden",
-        "& > .container": {
-            padding: 30, 
-            verticalAlign:"middle", 
-            display: "table-cell", 
+
+    dateText: {
+        color: "#333"
+    },
+    timeline: {
+        "&::before": {
+            backgroundColor: "#333",
         }
     },
-    headerImage: {
-        width:"100%", 
-        marginLeft:0, 
-        textAlign:"right", 
-        backgroundColor: colors.header, 
-        overflow:"hidden"
+    filterContainer: {
+        display: "flex",
+        justifyContent: "space-between",
+        width: "80%",
+        marginLeft: "auto",
+        marginRight: "auto",
+        marginTop: 10,
+        marginBottom: 10
+    },
+    filterButton: {
+        textAlign: "center",
+        "&:focus": {
+            boxShadow: "none"
+        }
     }
 }
