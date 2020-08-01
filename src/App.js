@@ -1,19 +1,11 @@
 import React from 'react';
-import Container from "./components/Container"
-import ProfilePage from "./components/ProfilePage"
-import EducationPage from "./components/EducationPage"
-import ExperiencesPage from "./components/ExperiencesPage"
-import SkillsPage from "./components/SkillsPage"
+import Main from "./components/main"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <Container>
-        <ProfilePage themeColor={"#D3FFFF"} title={"Profile"}/>
-        <EducationPage themeColor={"#DAFFF1"} title={"Education"}/>
-        <ExperiencesPage themeColor={"#FFE7EC"} title={"Experiences"}/>
-        <SkillsPage themeColor={"#FFF9F0"} title={"Skills"}/>        
-      </Container>
+      <Main headerHeight={500}/>
     </div>
   );
 }
