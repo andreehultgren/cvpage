@@ -16,16 +16,20 @@ export default {
     },
     filterContainer: {
         display: "flex",
-        justifyContent: "space-between",
-        width: "80%",
+        justifyContent: "center",
         marginLeft: "auto",
         marginRight: "auto",
         marginTop: 10,
-        marginBottom: 10
+        marginBottom: 10,
     },
     filterButton: {
         textAlign: "center",
-
+        backgroundColor: "rgba(0,0,0,0)",
+        color: "#333",
+        "&:hover": {
+            backgroundColor: "rgba(0,0,0,0)",
+            color: "#333"
+        },
         "&:focus": {
             boxShadow: "none"
         }
@@ -41,13 +45,28 @@ export default {
         marginRight: 10,
         width: "100%",
         textAlign: "right",
-        padding: 5,
+        padding: 20,
         paddingBottom: 50,
+        "& a": { color: "#000" },
         "& > *": {
             margin: 10,
-            "& > a": {
-                color: "#333"
-            }
+        }
+    },
+    skillContainer: {
+        display: "flex",
+        margin: "auto",
+        marginTop: 30,
+        alignContent: "row",
+
+        "& > div": {
+            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "#FFF",
+            fontWeight: 700,
+            margin: 5,
+            padding: 5,
+            paddingLeft: 20,
+            paddingRight: 20,
+            borderRadius: 10
         }
     },
     imgContainer: {

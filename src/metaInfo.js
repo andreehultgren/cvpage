@@ -14,6 +14,12 @@ const Info = {
         imageSrc: "https://raw.githubusercontent.com/andreehultgren/cvpage/master/public/andree.jpg",
         title: "Machine Learning and Electrical Engineer",
         description: "I love complicated things. I am stubborn, therefore I find solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dictum volutpat. Cras sed ultricies ipsum. In vulputate leo eget sem aliquet, quis aliquet enim fringilla. ",
+        skills: [
+            "Python",
+            "React",
+            "Machine Learning",
+            "Django"
+        ],
         links: [
             {
                 url: "http://www.github.com/andreehultgren",
@@ -74,7 +80,14 @@ const Info = {
             title: "Fullstack Developer",
             company: "Skyqraft",
             description: "I developed their UI and all logic for both frontend and backend. The work was very successful. 50 new features were released over the span of two months.",
-            time: "Jun 2019 - Present",
+            time: "Jun 2020 - Present",
+            type: 2
+        },
+        {
+            title: "Entrepreneur",
+            company: "Hultan IT AB",
+            description: "I built a company where I sell technical services focused on fullstack development,",
+            time: "Sep 2019 - Present",
             type: 2
         },
         {

@@ -4,13 +4,14 @@ import { withStyles } from '@material-ui/core/styles';
 import 'react-vertical-timeline-component/style.min.css';
 import info from '../metaInfo';
 import style from '../styles'
-import Button from 'react-bootstrap/Button'
+import Checkbox from '@material-ui/core/Checkbox'
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 class Timeline extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            usedIDs: []
+            usedIDs: info.timelineTypes.map(item => item.id)
         };
     }
 
@@ -29,23 +30,19 @@ class Timeline extends React.Component {
         const { timeline, timelineTypes } = info;
         const { classes } = this.props
         const filteredTimeline = timeline.filter(item => this.state.usedIDs.includes(item.type))
-        const displayedTimeline = filteredTimeline.length === 0 ? timeline : filteredTimeline
         return (
             <div style={{ background: "#FFF" }}>
                 <div className={classes.filterContainer}>
                     {timelineTypes.map(type => {
-                        const width = Math.floor(100 / timelineTypes.length).toString()
                         return (
-                            <Button
-                                variant={this.state.usedIDs.includes(type.id) ? "info" : "outline-info"}
-                                style={{ width: `${width}%` }}
-                                className={classes.filterButton}
-                                onClick={() => { this.handleIDUpdate(type.id) }}>{type.title}</Button>
-                        )
+                            <FormControlLabel
+                                control={<Checkbox checked={this.state.usedIDs.includes(type.id)} style={{ color: type.backgroundColor }} onChange={() => { this.handleIDUpdate(type.id) }} />}
+                                label={type.title}
+                            />)
                     })}
                 </div >
                 <VerticalTimeline className={classes.timeline}>
-                    {displayedTimeline.map(item => {
+                    {filteredTimeline.map(item => {
                         const type = timelineTypes.find(type => type.id === item.type)
                         return (<VerticalTimelineElement
                             className={classes.timelineElement}
