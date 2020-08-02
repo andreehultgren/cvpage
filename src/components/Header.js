@@ -1,70 +1,27 @@
 import React from 'react';
-import metaInfo from '../metaInfo';
-import Container from 'react-bootstrap/Container'
+import GitHubIcon from '@material-ui/icons/GitHub';
+import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from '@material-ui/icons/Phone';
+import Download from '@material-ui/icons/GetApp';
 import { withStyles } from '@material-ui/core/styles';
+import 'react-vertical-timeline-component/style.min.css';
+
+import metaInfo from '../metaInfo'
 import style from '../styles'
 
 class Header extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            dividerX: "50%",
-            dividerMargin: 220
-        };
-    }
-
-    componentDidMount = () => {
-        window.addEventListener('resize', this.changeDividerMargin);
-        this.changeDividerMargin()
-
-
-    }
-
-    changeDividerMargin = () => {
-        const callback = this.dividerMarginState
-        const { person } = metaInfo,
-            { imageSrc } = person,
-            { height } = this.props;
-
-        var img = new Image();
-        img.onload = function () {
-            const scale = height / this.height;
-            callback(this.width * scale)
-        };
-        img.src = imageSrc;
-    }
-
-    dividerMarginState = (imageWidth) => {
-        this.setState({ dividerMargin: (window.innerWidth - imageWidth) })
-
-    }
-
-    updateDivider = (event) => {
-        const windowWidth = window.innerWidth,
-            mousePosX = event.clientX,
-            { dividerMargin } = this.state;
-        const dividerX = Math.max(Math.min(mousePosX, windowWidth), dividerMargin)
-        this.setState({ dividerX })
-    }
-
-    render() {
-        const { classes, height } = this.props
+    render = () => {
+        const { classes } = this.props
         const { person } = metaInfo
         return (
-            <>
-                <div onMouseMove={this.updateDivider} style={{ height: height }} >
-                    <div className={classes.headerInfo} style={{ width: this.state.dividerX, height: height }}>
-                        <Container style={{ height: height }}>
-                            <h1>{person.firstName} {person.lastName}</h1>
-                            <hr />
-                            <h5>{person.title}</h5>
-                        </Container>
-                    </div>
-                    <div className={classes.headerImage} style={{ height: height }}>
-                        <img src={person.imageSrc} height={height} alt={"Background"} />
-                    </div>
+            <div className={classes.header}>
+                <div className={classes.linkSection}>
+                    {person.links.map(link => <a href={link.url} target={"_blank"}><link.icon /></a>)}
                 </div>
-            </>
+                <img height={200} width={200} src={person.imageSrc} style={{ borderRadius: 1000, margin: "auto", marginBottom: 30 }} />
+                <h1 style={{ margin: "auto" }}>{person.firstName} {person.lastName}</h1>
+                <h4 style={{ margin: "auto", textAlign: "center" }}>{person.title}</h4>
+            </div>
         )
     }
 }

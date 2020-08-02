@@ -1,15 +1,43 @@
 import WorkIcon from '@material-ui/icons/Work'
 import SchoolIcon from '@material-ui/icons/School'
 import StarsIcon from '@material-ui/icons/Stars';
+import GithubIcon from '@material-ui/icons/GitHub'
+import MailIcon from '@material-ui/icons/Mail'
+import PhoneIcon from '@material-ui/icons/Phone'
+import DownloadIcon from '@material-ui/icons/GetApp'
 
 const Info = {
     person: {
         firstName: "Andree",
         lastName: "Hultgren",
         phoneNumber: "+46736544491",
-        imageSrc: "https://wallpaperplay.com/walls/full/c/5/3/34778.jpg",
+        imageSrc: "https://media-exp1.licdn.com/dms/image/C5603AQGa51aT6bBMkw/profile-displayphoto-shrink_200_200/0?e=1597276800&v=beta&t=MaZFH-Jc9HsqVP60e8EUWy7KLxJnIfVsh7YV0U6gYh0",
         title: "Electrical engineer with a masters in Machine Learning",
-        description: "I love complicated things. I am stubborn, therefore I find solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dictum volutpat. Cras sed ultricies ipsum. In vulputate leo eget sem aliquet, quis aliquet enim fringilla. "
+        description: "I love complicated things. I am stubborn, therefore I find solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dictum volutpat. Cras sed ultricies ipsum. In vulputate leo eget sem aliquet, quis aliquet enim fringilla. ",
+        links: [
+            {
+                url: "http://www.github.com/andreehultgren",
+                icon: GithubIcon
+            },
+            {
+                url: "mailto:andree_hultgren@hotmail.com",
+                icon: MailIcon
+            },
+            {
+                url: "tel:+46736544491",
+                icon: PhoneIcon
+            },
+            {
+                url: "http://www.google.com",
+                icon: DownloadIcon
+            }
+        ]
+    },
+    theme: {
+        headerColor: "#E0F0FF",
+        timelineCenterlineColor: "#ddd",
+        filterButtonBackgroundColor: "#BB89ED",
+        filterButtonTextColor: "#FFF"
     },
     timelineTypes: [
         {
@@ -55,6 +83,13 @@ const Info = {
             description: "I trained conversational AI with managing APIs as my main responsibility.",
             time: "Aug 2019 - Aug 2020",
             type: 2
+        },
+        {
+            title: "Teacher in religious studies",
+            company: "The Church of Jesus Christ of Latter-day Saints",
+            description: "I taught fundamental teachings of my beliefs to a class of approximately 15 students aged 14-18.",
+            time: "Aug 2016 - Dec 2019",
+            type: 3
         },
         {
             title: "Connection Administrator",
