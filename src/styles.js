@@ -39,14 +39,16 @@ export default {
         backgroundColor: Info.theme.headerColor,
         display: "flex",
         flexDirection: "column",
-        paddingBottom: 50
+        paddingBottom: 50,
+        "& h1": {
+            textAlign: "center"
+        }
     },
     linkSection: {
         marginRight: 10,
         width: "100%",
         textAlign: "right",
         padding: 20,
-        paddingBottom: 50,
         "& a": { color: "#000" },
         "& > *": {
             margin: 10,
@@ -56,7 +58,10 @@ export default {
         display: "flex",
         margin: "auto",
         marginTop: 30,
-        alignContent: "row",
+
+        flexWrap: "wrap",
+        justifyContent: "center",
+
 
         "& > div": {
             backgroundColor: "rgba(0,0,0,0.5)",
