@@ -11,8 +11,8 @@ const Info = {
         firstName: "Andree",
         lastName: "Hultgren",
         phoneNumber: "+46736544491",
-        imageSrc: "https://media-exp1.licdn.com/dms/image/C5603AQGa51aT6bBMkw/profile-displayphoto-shrink_200_200/0?e=1597276800&v=beta&t=MaZFH-Jc9HsqVP60e8EUWy7KLxJnIfVsh7YV0U6gYh0",
-        title: "Electrical engineer with a masters in Machine Learning",
+        imageSrc: "https://raw.githubusercontent.com/andreehultgren/cvpage/master/public/andree.jpg",
+        title: "Machine Learning and Electrical Engineer",
         description: "I love complicated things. I am stubborn, therefore I find solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dictum volutpat. Cras sed ultricies ipsum. In vulputate leo eget sem aliquet, quis aliquet enim fringilla. ",
         links: [
             {
@@ -28,7 +28,7 @@ const Info = {
                 icon: PhoneIcon
             },
             {
-                url: "http://www.google.com",
+                url: "https://github.com/andreehultgren/cvpage/raw/master/public/CV_Andree_Hultgren.pdf",
                 icon: DownloadIcon
             }
         ]

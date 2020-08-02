@@ -49,5 +49,23 @@ export default {
                 color: "#333"
             }
         }
+    },
+    imgContainer: {
+        overflow: "hidden",
+        position: "relative",
+        height: 250,
+        width: 250,
+        borderRadius: 1000,
+        border: "5px solid white",
+        margin: "auto",
+        marginBottom: 20,
+        "& img": {
+            position: "absolute",
+            width: "auto",
+            height: "100%",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%,-50%)"
+        }
     }
 }
