@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Hemkyrka</title>
+	</head>
+	<body>
+		<style type="text/css">
+			body{
+				display:flex;
+				flex-direction: column;
+				justify-content: center;
+				min-height: 100vh;
+				margin:0px;
+				padding: 0px;
+			}
+			.button{
+				background-color: red;
+				width:500px;
+				height:500px;
+				margin:auto;
+				border-radius: 1000px;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				color:white;
+				font-size: 40px;
+			}
+		</style>
+		<div class="button" id="marker" onClick="myFunction()">
+			Jag har haft hemkyrka
+		</div>
+		<script type="text/javascript">
+			function myFunction() {
+    			document.getElementById("marker").style.backgroundColor = "green";
+			}
+		</script>
+	</body>
+</html>
