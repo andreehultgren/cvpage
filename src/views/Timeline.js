@@ -1,9 +1,7 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { withStyles } from '@material-ui/core/styles';
 import 'react-vertical-timeline-component/style.min.css';
 import info from '../metaInfo';
-import style from '../styles'
 import Checkbox from '@material-ui/core/Checkbox'
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
@@ -28,28 +26,28 @@ class Timeline extends React.Component {
 
     render = () => {
         const { timeline, timelineTypes } = info;
-        const { classes } = this.props
         const filteredTimeline = timeline.filter(item => this.state.usedIDs.includes(item.type))
         return (
-            <div style={{ background: "#FFF" }}>
-                <div className={classes.filterContainer}>
+            <div>
+                <div className="filterContainer">
                     {timelineTypes.map(type => {
                         return (
                             <FormControlLabel
                                 control={<Checkbox checked={this.state.usedIDs.includes(type.id)} style={{ color: type.backgroundColor }} onChange={() => { this.handleIDUpdate(type.id) }} />}
                                 label={type.title}
+                                className="filterButtons"
                             />)
                     })}
                 </div >
-                <VerticalTimeline className={classes.timeline}>
+                <VerticalTimeline className="timeline">
                     {filteredTimeline.map(item => {
                         const type = timelineTypes.find(type => type.id === item.type)
                         return (<VerticalTimelineElement
-                            className={classes.timelineElement}
+                            className="timelineElement"
                             contentStyle={{ background: type.backgroundColor, color: type.textColor }}
                             contentArrowStyle={{ borderRight: `7px solid  ${type.backgroundColor}` }}
                             date={item.time}
-                            dateClassName={classes.dateText}
+                            dateClassName="dateText"
                             iconStyle={{ background: type.backgroundColor, color: type.textColor }}
                             icon={< type.icon />}
                         >
@@ -66,4 +64,4 @@ class Timeline extends React.Component {
     }
 }
 
-export default withStyles(style)(Timeline)
+export default Timeline

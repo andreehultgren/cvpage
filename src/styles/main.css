@@ -1,0 +1,135 @@
+:root{
+    --primary:          #0022AA;
+    --secondary:        #FF4444;
+    --text-contrast:    #FFFFFF;
+    --text-passive:     #888888;
+}
+
+html[data-theme='light']{
+    --bg-primary:       #FFFFFF;
+    --bg-secondary:     #AADDFF;
+    --text-primary:     #000000;
+    --text-secondary:   #555555;
+}
+
+html[data-theme='dark']{
+    --bg-primary:       #000000;
+    --bg-secondary:     #222222;
+    --text-primary:     #FFFFFF;
+    --text-secondary:   #AAAAAA;
+    
+}
+
+body{
+    background-color: var(--bg-primary)!important;
+    transition: background-color 0.5s;
+}
+
+.dateText{
+    color: var(--text-passive);
+}
+
+.timeline::before{
+    background-color:var(--text-passive);
+}
+
+.filterButtons{
+    color:var(--text-primary);
+    transition: color 0.5s;
+}
+
+.timelineElement .vertical-timeline-element-icon{
+    box-shadow: 0 0 0 4px var(--text-passive), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+}
+.filterContainer{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.filterButton{
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    color: #333,
+}
+.filterButton:hover{
+    background-color: rgba(0,0,0,0);
+    color: #333333;
+}
+.filterButton:focus{
+    box-shadow: none;
+}
+
+.header{
+    width: 100%;
+    background-color: var(--bg-secondary);
+    transition: background-color 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.header h1, .header h4{
+    margin:auto;
+    text-align: center;
+    color:var(--text-primary);
+    transition: color 0.5s;
+    padding:10px
+}
+
+.linkSection{
+    margin-top:5px;
+}
+
+.linkSection a{
+    color:var(--text-primary);
+    transition: color 0.5s;
+}
+
+.leftRight{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+.skillContainer{
+    display: flex;
+    margin: auto;
+    margin-top: 30;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skillContainer > div{
+    background-color:var(--primary);
+    color: var(--text-contrast);
+    font-weight: 700px;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+
+.imgContainer{
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 1000px;
+    border: 5px solid white;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.imgContainer img{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
